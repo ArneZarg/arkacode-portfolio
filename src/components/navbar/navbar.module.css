@@ -10,13 +10,70 @@
 .navbar a{
     text-decoration: none;
 }
-.siteLogo{
-    font-size:30px;
+.desktop{
+    display:none;
+}
+.mobile{
+    width:100%;
+    padding:0 3%;
+}
+.mobileNavButton{
+    background-color: transparent;
+    border:none;
+    display:flex;
+    flex-direction: column;
+    padding:5px;
+    position:relative;
+    width:50px;
+    height:25px;
+}
+.mobileNavButton span{
+    display:block;
+    background:#fff;
+    width:40px;
+    height:2px;
+    border-radius:3px;
+    position:absolute;
+    left:0;
+    z-index:3;
+}
+.mobileNavButton span:nth-child(1){
+    top:0;
+}
+.mobileNavButton span:nth-child(2){
+    top:50%;
+    transform:translateY(-50%);
+}
+.mobileNavButton span:nth-child(3){
+    bottom:0;
+}
+.mobileNavButton.active span:nth-child(1){
+    top: 10px;
+    transform: rotate(45deg);
+}
+.mobileNavButton.active span:nth-child(3){
+    transform:rotate(-45deg);
+    bottom:12px;
+}
+.mobileNavButton.active span:nth-child(2){
+    display:none;
+}
+.mobileMenu{
+    display:none;
+}
+.mobileMenuActive{
+    background:#091829;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:2;
+    height:100vh;
+    width:100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 .inner{
-    max-width:1400px;
-    margin:0 auto;
-    padding:0 3%;
     width:100%;
     display:flex;
     justify-content:space-between;
@@ -25,16 +82,51 @@
 .navbar ul{
     list-style: none;
     margin:0;
-    display:flex;
-    align-items:center;
+    padding:0;
 }
 .navbar ul li{
-    margin-left:30px;
+    margin-top:15px;
+    text-align:center;
 }
 .navbar ul li a{
-    font-size:20px;
+    font-size:30px;
 }
-.desktop{
+.siteLogo{
+    font-size:24px;
     width:100%;
-    display:block;
+    position:absolute;
+    text-align:center;
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
+}
+@media(min-width:900px){
+    .mobile{
+        display:none;
+    }
+    .desktop{
+        width:100%;
+        display:block;
+        max-width:1400px;
+        margin:0 auto;
+        padding:0 3%;
+    }
+    .navbar ul{
+        
+        display:flex;
+        align-items:center;
+    }
+    .navbar ul li{
+        margin-left:30px;
+    }
+    .navbar ul li a{
+        font-size:20px;
+    }
+    .siteLogo{
+        font-size:30px;
+        width:unset;
+        position:unset;
+        text-align:left;
+        transform:unset;
+    }
 }
