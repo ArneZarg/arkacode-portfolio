@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = () => {
-    const [activeMobile, setActiveMobile] = useState(false);
+    const [activeMobile, setActiveMobile] = useState<boolean>(false);
     return(
         <nav className={styles.navbar}>
             <div className={styles.desktop}>
