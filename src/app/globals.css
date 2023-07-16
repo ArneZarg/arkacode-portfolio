@@ -13,11 +13,19 @@ body {
   background: linear-gradient(180deg, rgba(9,24,41,1) 0%, rgba(3,9,15,1) 100%);
   color:#fff;
 }
-
 a{
   color:inherit;
 }
-
+main{
+  padding-top:85px;
+  min-height:calc(100vh - 85px);
+}
+@media(min-width:900px){
+  main{
+    padding-top:115px;
+    min-height:calc(100vh - 115px);
+  }
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

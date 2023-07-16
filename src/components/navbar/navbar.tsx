@@ -44,19 +44,19 @@ const Navbar = () => {
                 <div className={styles.siteLogo}>
                     <Link href="/">ARKACODE.COM</Link>
                 </div>
-                <div className={activeMobile ? styles.mobileMenuActive: styles.mobileMenu}>
+                <div className={activeMobile ? `${styles.mobileMenu} ${styles.active}` : styles.mobileMenu}>
                     <ul>
                         <li>
-                            <Link href="/">Home</Link>
+                            <Link onClick={() => setActiveMobile(false)} href="/">Home</Link>
                         </li>
                         <li>
-                            <Link href="/">About</Link>
+                            <Link onClick={() => setActiveMobile(false)} href="/">About</Link>
                         </li>
                         <li>
-                            <Link href="/">Projects</Link>
+                            <Link onClick={() => setActiveMobile(false)} href="/projects">Projects</Link>
                         </li>
                         <li>
-                            <Link href="/">Contact</Link>
+                            <Link onClick={() => setActiveMobile(false)} href="/">Contact</Link>
                         </li>
                     </ul>
                 </div>
