@@ -7,6 +7,7 @@
     align-items: center;
     top:0;
     left:0;
+    z-index:9;
 }
 .navbar a{
     text-decoration: none;
@@ -27,6 +28,7 @@
     position:relative;
     width:50px;
     height:25px;
+    display:block;
 }
 .mobileNavButton span{
     display:block;
@@ -40,10 +42,12 @@
 }
 .mobileNavButton span:nth-child(1){
     top:0;
+    transition:0.2s;
 }
 .mobileNavButton span:nth-child(2){
     top:50%;
     transform:translateY(-50%);
+    transition:0.2s;
 }
 .mobileNavButton span:nth-child(3){
     bottom:0;
@@ -51,21 +55,20 @@
 .mobileNavButton.active span:nth-child(1){
     top: 10px;
     transform: rotate(45deg);
+    transition:0.2s;
 }
 .mobileNavButton.active span:nth-child(3){
     transform:rotate(-45deg);
     bottom:12px;
+    transition:0.2s;
 }
 .mobileNavButton.active span:nth-child(2){
     display:none;
 }
 .mobileMenu{
-    display:none;
-}
-.mobileMenuActive{
     background:#091829;
     position:fixed;
-    top:0;
+    top:-100vh;
     left:0;
     z-index:2;
     height:100vh;
@@ -73,6 +76,10 @@
     display:flex;
     align-items: center;
     justify-content: center;
+    transition:0.2s;
+}
+.mobileMenu.active{
+    top:0;
 }
 .inner{
     width:100%;

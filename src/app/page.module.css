@@ -1,17 +1,15 @@
 .container{
-    width:100%;
     margin:0 auto;
     padding:0 3%;
     max-width:1300px;
 }
 .homepage{
     width:100%;
-    max-width:1000px;
-    margin-top:200px;
+    max-width:1000px;   
     position:relative;
 }
 .homepage h1{
-    font-size:45px;
+    font-size:35px;
 }
 .homepage h1 span{
     font-weight:normal;
@@ -22,11 +20,27 @@
 }
 .background{
     position:absolute;
-    top:-90px;
-    left:-100px;
-    z-index:-1;
-    animation: rotate 4s linear infinite;
+    z-index:-3;
     opacity:0.7;
+    top:100px;
+    left:-100px;
+    transform:translate(-50%,-50%);
+    animation: rotate 4s linear infinite;
+}
+@media(min-width:900px){
+    .background{
+        top:-90px;
+        left:-100px;
+        transform:unset;
+        animation: rotate 4s linear infinite;
+    }
+    .homepage{
+        margin-top:200px;
+    }
+    .homepage h1{
+        font-size:45px;
+    }
+    
 }
 .see{
     margin-top:40px;
@@ -34,8 +48,10 @@
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
+        transform-origin: center;
     }
     100% {
         transform: rotate(360deg);
+        transform-origin: center;
     }
 }  
