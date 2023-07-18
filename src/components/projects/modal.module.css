@@ -49,6 +49,7 @@
     background:none;
     border:none;
     font-size:16px;
+    cursor:pointer;
 }
 .modalTitle{
     font-size:24px;

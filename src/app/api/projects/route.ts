@@ -71,7 +71,7 @@ export async function GET(request:Request){
             technologies:["Wordpress","PHP","Javascript","SQL"],
             url:"https://reviewology.com/",
             modalContent:{
-                longDescription:"Reviewolgy.com is a website built in Wordpress and PHP. The website includes reviews for products and ranked listings for each product category. The main feature is a custom-built user reviews option, similar to Amazon, where users are able to rate products between 1 and 5 stars. The reviews are stored in a SQL database and a PHP cron script calculates the average and total per review. The website was written in WordPress and PHP, while the reviews application was written in jQuery and PHP."
+                longDescription:"Reviewolgy.com is a website built in Wordpress and PHP. The website includes reviews for products and ranked listings for each product category. The main feature is a custom-built user reviews option, similar to Amazon, where users are able to rate products between 1 and 5 stars. The reviews are stored in a SQL database and a PHP cron script calculates the average and total per review. Another notable feature is a custom script that allows the user to compare 2 products. The website was written in WordPress and PHP, while the reviews application was written in jQuery and PHP."
             }
         },
         {

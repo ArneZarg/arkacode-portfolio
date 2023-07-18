@@ -1,19 +1,35 @@
+"use client"
+
 import Project from '@/components/projects/project';
-import styles from './projects.module.css'
-import Image from 'next/image';
+import styles from './projects.module.css';
+import {useEffect, useState} from 'react';
 
 
-async function getData(){
-    const res = await fetch("http://localhost:3000/api/projects");
-    if(!res.ok){
-        throw new Error("Failed to fetch data.");
+const getData = async () => {
+    try {
+      const response = await fetch('/api/projects');
+      const data = await response.json();
+      console.log('Data: ', data);
+      return data;
+    } catch (error) {
+      console.error('Error fetching data: ', error);
+      throw error;
     }
-    return res.json();
-}
+  };
+  
+  
 
-const Projects = async () => {
-    const projects = await getData();
-    console.log(projects)
+const Projects = () => {
+    const [projects, setProjects] = useState<any>([]);
+
+    useEffect(() => {
+        getData()
+        .then((data) => setProjects(data))
+        .catch((error) => {
+            console.log(error);
+        });
+    }, []);
+    
     return(
         <main>
             <div className={styles.container}>
