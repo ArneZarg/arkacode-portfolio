@@ -19,17 +19,13 @@
 .project .description{
     position:absolute;
     background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-    top:100%;
+    top:0;
     left:0;
     height:100%;
     width:100%;
     display:flex;
     flex-direction: column;
     justify-content: flex-end;
-    transition:0.2s;
-}
-.project:hover .description{
-    top:0;
     transition:0.2s;
 }
 .project .text{
@@ -74,5 +70,12 @@
         flex-basis:100%;
         width:0;
         order:2;
+    }
+    .project .description{
+        top:100%;
+    }
+    .project:hover .description{
+        top:0;
+        transition:0.2s;
     }
 }
