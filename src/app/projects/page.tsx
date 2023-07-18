@@ -1,7 +1,46 @@
-import styles from '../page.module.css'
+"use client"
 
-const Second = () => {
-    return(<main className={styles.main}><h1>hey everyone</h1></main>)
+import Project from '@/components/projects/project';
+import styles from './projects.module.css';
+import {useEffect, useState} from 'react';
+
+
+const getData = async () => {
+    try {
+      const response = await fetch('/api/projects');
+      const data = await response.json();
+      console.log('Data: ', data);
+      return data;
+    } catch (error) {
+      console.error('Error fetching data: ', error);
+      throw error;
+    }
+  };
+  
+  
+
+const Projects = () => {
+    const [projects, setProjects] = useState<any>([]);
+
+    useEffect(() => {
+        getData()
+        .then((data) => setProjects(data))
+        .catch((error) => {
+            console.log(error);
+        });
+    }, []);
+    
+    return(
+        <main>
+            <div className={styles.container}>
+                <h1>Projects</h1>
+                <div className={styles.projects}>
+                    {projects.map((p:object) => {
+                        return <Project projectData={p}/>
+                    })}
+                </div>
+            </div>
+        </main>)
 }
 
-export default Second;
+export default Projects;
