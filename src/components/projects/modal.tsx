@@ -8,10 +8,10 @@ export default function Modal(props:any){
 
     return(
         <div className={modalActive ? `${styles.modal} ${styles.active}` : styles.modal}>
-            <div className={styles.overlay}></div>
+            <div className={styles.overlay} onClick={handleModal}></div>
             
             <div className={styles.content}>
-                <button className={styles.close} onClick={props.handleModal}>
+                <button className={styles.close} onClick={handleModal}>
                     Close
                 </button>
                 <div className={styles.modalTitle}>
