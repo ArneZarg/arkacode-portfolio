@@ -1,0 +1,66 @@
+.modal{
+    position:fixed;
+    width:100vw;
+    height:100%;
+    z-index: -5;
+    top:0;
+    left:0;
+    opacity:0;
+    transition:0.1s;
+}
+.modal.active{
+    z-index:99;
+    opacity:1;
+}
+.overlay{
+    background:rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+}
+.content{
+    background: linear-gradient(180deg, rgba(9,24,41,1) 0%, rgba(3,9,15,1) 100%);
+    color:#fff;
+    position:absolute;
+    top:0;
+    right:-300px;
+    padding:20px 40px;
+    height:100%;
+    width:300px;
+    z-index:999;
+    transition:0.2s;
+}
+.modal.active .content{
+    right:0;
+    transition:0.2s;
+}
+.modalImg{
+    width:100%;
+    overflow:hidden;
+    border-radius:5px;
+    display:flex;
+    flex-direction: column;
+}
+.modal img{
+    max-width:100%;
+}
+.modal button{
+    color:#fff;
+    text-decoration: underline;
+    background:none;
+    border:none;
+    font-size:16px;
+}
+.modalTitle{
+    font-size:24px;
+    font-weight:bold;
+    margin:15px 0;
+}
+.techRow{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+.techText{
+    margin:2px 15px 0 0;
+    font-size:15px;
+}
