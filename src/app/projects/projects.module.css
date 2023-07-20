@@ -3,6 +3,9 @@
     padding:0 3%;
     max-width:1300px;
 }
+.footer{
+    margin-bottom:60px;
+}
 @media(min-width:900px){
     .projects{
         display:flex;

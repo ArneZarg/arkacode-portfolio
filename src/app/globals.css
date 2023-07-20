@@ -6,7 +6,9 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
-
+*{
+  box-sizing: border-box;
+}
 body {
   margin:0;
   background: rgb(9,24,41);

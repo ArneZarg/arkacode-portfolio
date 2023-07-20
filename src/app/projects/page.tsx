@@ -39,6 +39,9 @@ const Projects = () => {
                         return <Project projectData={p}/>
                     })}
                 </div>
+                <div className={styles.footer}>
+                    <a href="Arne Zargarian - Full Stack Developer.docx.pdf" target="_blank">Download my resume here!</a>
+                </div>
             </div>
         </main>)
 }

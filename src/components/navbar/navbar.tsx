@@ -19,7 +19,7 @@ const Navbar = () => {
                             <Link href="/">Home</Link>
                         </li>
                         <li>
-                            <Link href="/">About</Link>
+                            <Link href="/about">About</Link>
                         </li>
                         <li>
                             <Link href="/projects">Projects</Link>
@@ -50,7 +50,7 @@ const Navbar = () => {
                             <Link onClick={() => setActiveMobile(false)} href="/">Home</Link>
                         </li>
                         <li>
-                            <Link onClick={() => setActiveMobile(false)} href="/">About</Link>
+                            <Link onClick={() => setActiveMobile(false)} href="/about">About</Link>
                         </li>
                         <li>
                             <Link onClick={() => setActiveMobile(false)} href="/projects">Projects</Link>
