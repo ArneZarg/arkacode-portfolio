@@ -12,7 +12,6 @@ const ContactForm = () => {
     const [loading,setLoading] = useState<boolean>(false)
 
     const handleChange = (e:any) =>{
-        console.log(process.env.RESEND_API_KEY)
         const { name, value } = e.target;
         setFormData((prevFormData:any) => ({
             ...prevFormData,
