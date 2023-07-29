@@ -9,9 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-email/button": "0.0.10",
-    "@react-email/html": "0.0.4",
-    "@sendgrid/mail": "^7.7.0",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
@@ -19,10 +16,8 @@
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "next": "^13.4.9",
-    "nodemailer": "^6.9.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-email": "1.9.4",
     "resend": "^0.16.0",
     "typescript": "5.1.6"
   },
