@@ -1,7 +1,6 @@
 'use client'
 import styles from "./contact.module.css";
 import { useState } from "react";
-import { sendEmail } from "../../../actions/contact/sendEmails";
 
 const ContactForm = () => {
 
