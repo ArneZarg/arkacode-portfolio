@@ -8,7 +8,9 @@ const ContactForm = () => {
         name:'',
         email:'',
         message:''
-    })
+    });
+    const [loading,setLoading] = useState<boolean>(false)
+
     const handleChange = (e:any) =>{
         console.log(process.env.RESEND_API_KEY)
         const { name, value } = e.target;
@@ -17,8 +19,10 @@ const ContactForm = () => {
             [name]: value,
         }));
     }
+    
     const handleSubmit = async(e:any) => {
         e.preventDefault();
+        setLoading(true);
         await fetch("/api/contact",{
             method:"POST",
             mode:"cors",
@@ -26,8 +30,14 @@ const ContactForm = () => {
                 "Content-Type":"application/json"
             },
             body:JSON.stringify(formData)
+        }).then(()=>{
+            alert("Message sent successfully!");
+        }).catch((error)=>{
+            console.log(error);
         });
+        setLoading(false);
     }
+
     return(
         <main>
             <div className={styles.container}>
@@ -44,7 +54,7 @@ const ContactForm = () => {
                         <textarea value={formData.message} onChange={handleChange} id="message" name="message" placeholder="Message" required/>
                     </div>
                     <div className={styles.button}>
-                        <button type="submit">SEND MESSAGE</button>
+                        <button type="submit">{loading?"SENDING...":"SEND MESSAGE"}</button>
                     </div>
                 </form>
             </div>
