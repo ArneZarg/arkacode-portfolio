@@ -25,7 +25,7 @@ const Navbar = () => {
                             <Link href="/projects">Projects</Link>
                         </li>
                         <li>
-                            <Link href="/">Contact</Link>
+                            <Link href="/contact">Contact</Link>
                         </li>
                         <li>
                             <a target="_blank" href="https://github.com/ArneZarg">
@@ -56,7 +56,7 @@ const Navbar = () => {
                             <Link onClick={() => setActiveMobile(false)} href="/projects">Projects</Link>
                         </li>
                         <li>
-                            <Link onClick={() => setActiveMobile(false)} href="/">Contact</Link>
+                            <Link onClick={() => setActiveMobile(false)} href="/contact">Contact</Link>
                         </li>
                     </ul>
                 </div>

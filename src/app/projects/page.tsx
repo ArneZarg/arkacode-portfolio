@@ -35,8 +35,8 @@ const Projects = () => {
             <div className={styles.container}>
                 <h1>Projects</h1>
                 <div className={styles.projects}>
-                    {projects.map((p:object) => {
-                        return <Project projectData={p}/>
+                    {projects.map((p:object,index:number) => {
+                        return <Project key={index} projectData={p}/>
                     })}
                 </div>
                 <div className={styles.footer}>
