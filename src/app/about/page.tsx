@@ -41,7 +41,7 @@ export default function About(){
                 <a href="Arne Zargarian - Full Stack Developer.docx.pdf" target="_blank">Download my resume here!</a>
                 <div className={styles.footer}>
                     <h2>Ready to bring your digital vision to life?</h2>
-                    <p>Reach out to Arne today to discuss your web development needs. With his proven expertise and commitment to excellence, John will work closely with you to turn your ideas into reality. Let's create something remarkable together!</p>
+                    <p>Reach out to Arne today to discuss your web development needs. With his proven expertise and commitment to excellence, John will work closely with you to turn your ideas into reality. Let&apos;s create something remarkable together!</p>
                 </div>
             </div>
         </main>
