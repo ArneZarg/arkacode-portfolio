@@ -26,20 +26,22 @@ export default function Project(props:any){
     return(
         <>
             <div className={styles.project} onClick={handleModal}>
-                <Image
-                    className={projectData.imageSrc ? "" : styles.placeholder}
-                    src={projectData.imageSrc ? projectData.imageSrc : "/img/placeholder.png"}
-                    width={500}
-                    height={500}
-                    alt={projectData.imageAlt ? projectData.imageAlt : 'placeholder'}
-                />
+                <div className={styles.screenshot}>
+                    <Image
+                        className={projectData.imageSrc ? "" : styles.placeholder}
+                        src={projectData.imageSrc ? projectData.imageSrc : "/img/placeholder.png"}
+                        width={400}
+                        height={600}
+                        alt={projectData.imageAlt ? projectData.imageAlt : 'placeholder'}
+                    />
+                </div>
                 <div className={styles.description}>
                     <div className={styles.text}>
                         <h3>{projectData.title}</h3>
                         <p>{projectData.description}</p>
                         <div className={styles.technologies}>
-                            {projectData.technologies.map((t:string)=>{
-                                return <div className={styles.tech}>{t}</div>
+                            {projectData.technologies.map((t:string,i:number)=>{
+                                return <div key={i} className={styles.tech}>{t}</div>
                             })}
                         </div>
                     </div>
