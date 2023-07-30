@@ -1,6 +1,4 @@
 "use client"
-
-import Image from "next/image";
 import styles from "./about.module.css"
 import Skill from "@/components/about/skill";
 import { useState,useEffect } from "react";
@@ -10,7 +8,6 @@ const getData = async () => {
     try {
       const response = await fetch('/api/about');
       const data = await response.json();
-      console.log('Data: ', data);
       return data;
     } catch (error) {
       console.error('Error fetching data: ', error);
@@ -36,8 +33,8 @@ export default function About(){
                 <h1>Why Choose Arne Zargarian?</h1>
                 <div className={styles.skills}>
                     {
-                        skills.map((s:any) => {
-                            return <Skill skillData={s}/>
+                        skills.map((s:any,i:number) => {
+                            return <Skill key={i} skillData={s}/>
                         })
                     }
                 </div>
