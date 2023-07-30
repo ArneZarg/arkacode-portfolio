@@ -25,9 +25,10 @@
     right:-300px;
     padding:20px 40px;
     height:100%;
-    width:300px;
+    width:100%;
     z-index:999;
     transition:0.2s;
+    overflow:auto;
 }
 .modal.active .content{
     right:0;
@@ -64,4 +65,9 @@
 .techText{
     margin:2px 15px 0 0;
     font-size:15px;
+}
+@media(min-width:425px){
+    .content{
+        width:400px;
+    }
 }

@@ -29,8 +29,8 @@ export default function Modal(props:any){
                 <div className={styles.modalTech}>
                     <h4>Technologies</h4>
                     <div className={styles.techRow}>
-                        {projectData.technologies.map((t:string)=>{
-                            return <div className={styles.techText}>{t}</div>
+                        {projectData.technologies.map((t:string,i:number)=>{
+                            return <div key={i} className={styles.techText}>{t}</div>
                         })}
                     </div>
                 </div>
@@ -48,7 +48,14 @@ export default function Modal(props:any){
                     </div>
                     : null
                 }
-                
+                {
+                    projectData.modalContent && projectData.modalContent.github2 ? 
+                    <div className={styles.links}>
+                        <h4>Github 2</h4>
+                        <a target="_blank" href={projectData.modalContent.github2}>{projectData.modalContent.github2}</a>
+                    </div>
+                    : null
+                }
             </div>
         </div>
     )
