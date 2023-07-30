@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request:Request) {
     const {name,email,message} = await request.json();
@@ -12,7 +12,7 @@ export async function POST(request:Request) {
       to: 'zargarian.arne@gmail.com',
       subject: `ARKACODE EMAIL FROM ${name} - <${email}>`,
       text:message,
-      html:"<h1>Email from Arkacode Form</h1>"
+      html:`<h1>Email from Arkacode Form</h1><p>${message}</p>`
     });
 
     return NextResponse.json(data);
